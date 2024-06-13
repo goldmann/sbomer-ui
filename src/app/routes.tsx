@@ -1,11 +1,8 @@
+import { Dashboard } from '@app/components/Pages/Dashboard/Dashboard';
+import { NotFound } from '@app/components/Pages/NotFound/NotFound';
+import { useDocumentTitle } from '@app/utils/useDocumentTitle';
 import * as React from 'react';
 import { Route, RouteComponentProps, Switch, useLocation } from 'react-router-dom';
-import { Dashboard } from '@app/Dashboard/Dashboard';
-import { Support } from '@app/Support/Support';
-import { GeneralSettings } from '@app/Settings/General/GeneralSettings';
-import { ProfileSettings } from '@app/Settings/Profile/ProfileSettings';
-import { NotFound } from '@app/NotFound/NotFound';
-import { useDocumentTitle } from '@app/utils/useDocumentTitle';
 
 let routeFocusTimer: number;
 export interface IAppRoute {
@@ -32,34 +29,15 @@ const routes: AppRouteConfig[] = [
     exact: true,
     label: 'Dashboard',
     path: '/',
-    title: 'PatternFly Seed | Main Dashboard',
-  },
-  {
-    component: Support,
-    exact: true,
-    label: 'Support',
-    path: '/support',
-    title: 'PatternFly Seed | Support Page',
-  },
-  {
-    label: 'Settings',
-    routes: [
-      {
-        component: GeneralSettings,
-        exact: true,
-        label: 'General',
-        path: '/settings/general',
-        title: 'PatternFly Seed | General Settings',
-      },
-      {
-        component: ProfileSettings,
-        exact: true,
-        label: 'Profile',
-        path: '/settings/profile',
-        title: 'PatternFly Seed | Profile Settings',
-      },
-    ],
-  },
+    title: 'SBOMer | Dashboard',
+  }
+  // {
+  //   component: Support,
+  //   exact: true,
+  //   label: 'Support',
+  //   path: '/support',
+  //   title: 'SBOMer | Support',
+  // },
 ];
 
 // a custom hook for sending focus to the primary content container
